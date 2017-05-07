@@ -1,13 +1,13 @@
 {
   "name": "tunefindjs",
   "version": "0.0.0",
-  "description": "",
+  "description": "Node.js library for the TuneFind REST API",
   "main": "index.js",
   "scripts": {
     "test": "jasmine"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["tunefind"],
+  "author": "Pedro Otero <pedro.otero.prada@gmail.com> (https://co.linkedin.com/in/pedrooteroprada)",
   "license": "ISC",
   "dependencies": {
     "unirest": "^0.5.1"
