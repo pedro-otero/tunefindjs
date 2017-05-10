@@ -19,7 +19,7 @@ All endpoint functions have the following arguments, which have to be passed in 
 
 - Strings: Arguments of the endpoint, such as ids.
 - Pagination: Zero, one or two number arguments for pagination. If you pass only one, it will be treated as the offset. If you pass two, the second one is the limit.
-- Callback: If you pass this argument, the function will call it whit the request results. If you don't pass it, the function returns a promise.
+- Callback: If you pass this argument, the function will call it with the request results. If you don't pass it, the function returns a promise.
 
 Pagination and callback are always optional. Strings may or may not be depending to the endpoint. If an argument is mandatory its name will appear **bold**. Some functions may not need pagination. For every function described below, the possible arguments are listed with it.
 
@@ -28,13 +28,13 @@ TunefindJS uses [unirest][5] to perform the HTTP requests. The responses you get
 Please check [Tunefind][1] site to know more about the endpoints.
 
 #### getArtist(**id**, callback)
-Gets the artist whose id is **id**
+Gets artist by id
 
 #### getArtists(offset, limit, callback)
 Lists the artists in the database
 
 #### getMovie(**id**, callback)
-Gets the movie whose id is **id**
+Gets the movie by id
 
 #### getMovies(offset, limit, callback)
 Lists the movies in the database
@@ -44,18 +44,12 @@ Gets info for a specific show, a season and an episode. The only mandatory argum
 
 `tunefind.getShow('alias', 'season-1')`
 
+#### getShows(offset, limit, callback)
+Lists the shows in the database
+
 ## Testing
 TunefindJS uses [Jasmine][6] for testing. The `test` script runs all the tests, including integration tests. For the integration tests to run succesfully you need to provide your own API keys in a `api-keys.json` file in the root of the folder of this project. This file is already ignored in `.gitignore`.
 
-## Author
-Pedro Otero
-[@pedro__otero][4]
-[pedro.otero.prada@gmail.com][2]
-[LinkedIn][3]
-
 [1]: https://www.tunefind.com/api
-[2]: mailto:pedro.otero.prada@gmail.com
-[3]: co.linkedin.com/in/pedrooteroprada
-[4]: twitter.com/pedro__otero
 [5]: https://github.com/Mashape/unirest-nodejs
 [6]: https://jasmine.github.io/
