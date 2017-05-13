@@ -92,13 +92,13 @@ describe('Request factory', function () {
         function cb() {
         }
 
-        let params = createParams([10, 50, cb]);
+        let params = createParams([0, 50, cb]);
 
         it(".callback is a function", function () {
             expect(params.callback).toEqual(cb);
         });
         it(".pagination has offset and limit", function () {
-            expect(params.pagination).toEqual({offset: 10, limit: 50});
+            expect(params.pagination).toEqual({offset: 0, limit: 50});
         });
         it(".path is empty", function () {
             expect(params.path).toEqual([]);

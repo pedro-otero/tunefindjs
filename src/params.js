@@ -12,7 +12,7 @@ module.exports = function (args) {
         if (!result.pagination) {
             result.pagination = {};
         }
-        if (!result.pagination.offset) {
+        if (typeof result.pagination.offset === 'undefined') {
             result.pagination.offset = arg;
         } else {
             result.pagination.limit = arg;
